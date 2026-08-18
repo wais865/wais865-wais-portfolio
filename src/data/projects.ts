@@ -160,8 +160,66 @@ export const projects: Project[] = [
     featured: true,
     status: "Delivered",
     href: "/projects/talent-aurora",
+    liveUrl: "https://talentaurora.com/",
     privateRepository: true,
     caseStudyAvailable: true,
+    caseStudy: {
+      role: "Independent Web Developer",
+      roleDetails: [
+        "Interpreting client requirements and brand direction into a production website",
+        "Implementing the frontend as a set of Lit web components",
+        "Building bilingual English/German content handling with automatic and manual language selection",
+        "Integrating contact form functionality for production use",
+        "Owning delivery independently from initial requirements through to production",
+      ],
+      team: "Independent Project",
+      repositoryStatus: "Private",
+      overview: [
+        "Talent Aurora is a production company website developed independently from client requirements and brand direction.",
+        "The implementation translated the client's requirements and visual direction into a responsive, bilingual web experience built with Lit web components and Vite.",
+      ],
+      problem: [
+        "The client needed a production website that could communicate its offering clearly to both English- and German-speaking visitors while remaining aligned with its brand direction.",
+      ],
+      approach: [
+        "Translating client requirements and brand direction into a component-based Lit frontend",
+        "Bilingual content handling using the @lit/localize library, with automatic language detection and manual switching",
+        "Responsive layout implementation using Bootstrap alongside custom CSS",
+        "Integrating production contact form functionality",
+        "Iterative, client-driven refinement through to production delivery",
+      ],
+      features: [
+        "English and German content across the site",
+        "Automatic language selection based on the visitor's browser",
+        "Manual language switching",
+        "Responsive company website layout",
+        "Production contact form",
+      ],
+      techStack: [
+        { category: "Frontend", items: ["Lit", "JavaScript", "Vite"] },
+        { category: "Styling", items: ["Bootstrap", "CSS"] },
+        { category: "Integration", items: ["EmailJS"] },
+      ],
+      screenshots: [
+        { size: "large", caption: "Homepage (English)" },
+        { size: "small", caption: "Homepage (German)" },
+        { size: "small", caption: "Services section" },
+      ],
+      challenges: [
+        "Translating client requirements and brand direction into concrete implementation decisions without a development team to validate the approach with",
+        "Maintaining consistent content and layout across two languages",
+        "Balancing the client's brand direction with practical responsive implementation",
+        "Independently owning delivery from requirements through to production, including client-driven refinement",
+      ],
+      learnings: [
+        "Working directly with a client's requirements and brand direction reinforced the importance of translating ambiguous direction into concrete implementation decisions early",
+        "Implementing bilingual content end-to-end highlighted how much a dedicated localization library helps keep two languages consistent as a site grows",
+        "Owning a project independently from requirements through production deepened my experience with the full delivery lifecycle, not just implementation",
+      ],
+      outcome: [
+        "The project resulted in a production website delivered for a real client, providing end-to-end experience translating business requirements and brand direction into a deployed bilingual web product.",
+      ],
+    },
   },
   {
     slug: "hrmis-recruitment",
