@@ -15,7 +15,7 @@ export default function CurrentlyBuilding() {
             Next.js · TypeScript · Tailwind CSS · Figma
           </p>
         </div>
-        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-secondary">
+        <p className="mt-2 max-w-2xl text-sm leading-relaxed text-secondary">
           This portfolio is itself an active project, built and iterated on
           in the open using the same standards applied to the work shown
           above.

@@ -15,7 +15,7 @@ export default function Contact() {
         Open to junior software engineering opportunities in Germany.
       </p>
 
-      <div className="mt-6 flex flex-wrap items-center gap-6 text-sm">
+      <div className="mt-5 flex flex-wrap items-center gap-6 text-sm">
         <TextLink href={siteLinks.github} external>
           GitHub ↗
         </TextLink>

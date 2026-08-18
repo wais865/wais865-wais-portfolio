@@ -4,13 +4,13 @@ import { technologies } from "@/data/technologies";
 
 export default function Technologies() {
   return (
-    <Section id="technologies" bordered>
+    <Section id="technologies" bordered padding="compact">
       <SectionLabel>Technologies</SectionLabel>
       <h2 className="text-2xl font-semibold text-primary md:text-3xl">
         Technologies
       </h2>
 
-      <div className="mt-8 grid grid-cols-1 gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-6 grid grid-cols-1 gap-x-10 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
         {technologies.map((group) => (
           <div key={group.category}>
             <h3 className="text-sm font-medium tracking-wide text-secondary uppercase">

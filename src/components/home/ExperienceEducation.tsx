@@ -6,13 +6,13 @@ import { education } from "@/data/education";
 
 export default function ExperienceEducation() {
   return (
-    <Section id="experience" bordered>
+    <Section id="experience" bordered padding="compact">
       <SectionLabel>Experience &amp; Education</SectionLabel>
       <h2 className="text-2xl font-semibold text-primary md:text-3xl">
         Experience &amp; Education
       </h2>
 
-      <div className="mt-8 grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-16">
+      <div className="mt-6 grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-16">
         <div>
           <h3 className="text-sm font-medium tracking-wide text-secondary uppercase">
             Experience

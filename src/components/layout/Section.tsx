@@ -10,8 +10,8 @@ interface SectionProps {
 }
 
 const paddingClasses: Record<NonNullable<SectionProps["padding"]>, string> = {
-  default: "py-16 md:py-24",
-  compact: "py-12 md:py-16",
+  default: "py-12 md:py-20",
+  compact: "py-10 md:py-14",
 };
 
 export default function Section({
