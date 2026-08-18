@@ -15,6 +15,12 @@ export const projects: Project[] = [
     caseStudyAvailable: true,
     caseStudy: {
       role: "Core Development Team · Full-Stack Development",
+      roleDetails: [
+        "Contributing to application development across frontend and backend",
+        "Implementing UI views and connecting them to backend APIs",
+        "Collaborating with another developer on feature implementation",
+        "Debugging and iteratively improving existing functionality",
+      ],
       team: "Collaborative Project",
       repositoryStatus: "Private",
       overview: [

@@ -63,6 +63,20 @@ export default function HrmisCaseStudyPage() {
             ))}
           </ul>
         </ProjectSection>
+
+        <ProjectSection heading="My Role">
+          <p className="text-sm font-medium text-primary">{caseStudy.role}</p>
+          <ul className="mt-4 flex flex-col gap-2">
+            {caseStudy.roleDetails.map((item) => (
+              <li
+                key={item}
+                className="text-base leading-relaxed text-secondary"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+        </ProjectSection>
       </Container>
     </main>
   );

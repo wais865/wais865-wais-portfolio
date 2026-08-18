@@ -10,6 +10,7 @@ export interface TechStackGroup {
 
 export interface ProjectCaseStudy {
   role: string;
+  roleDetails: string[];
   team: string;
   repositoryStatus: string;
   overview: string[];
