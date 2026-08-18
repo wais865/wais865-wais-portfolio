@@ -7,7 +7,7 @@ export const site = {
     "Software Developer focused on backend and full-stack engineering. Building practical software for real-world problems.",
   email: "waisalizada35@gmail.com",
   github: "https://github.com/wais865",
-  siteUrl: "https://temporary-instant-cedar-joq1dij.vercel.app" as string | null,
+  siteUrl: "https://wais-alizada.vercel.app" as string | null,
 };
 
 export function buildMetadata(
