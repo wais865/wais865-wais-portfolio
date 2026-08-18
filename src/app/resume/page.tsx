@@ -16,8 +16,8 @@ export default function ResumePage() {
   return (
     <main>
       <Container>
-        <div className="py-12 md:py-20">
-          <header className="border-b border-border pb-8">
+        <div className="py-12 md:py-20 print:py-6">
+          <header className="border-b border-border pb-8 print:pb-4">
             <h1 className="text-3xl font-semibold text-primary md:text-4xl">
               Wais Alizada
             </h1>
@@ -40,7 +40,7 @@ export default function ResumePage() {
             </div>
           </header>
 
-          <section aria-labelledby="summary-heading" className="mt-8">
+          <section aria-labelledby="summary-heading" className="mt-8 print:mt-5">
             <h2
               id="summary-heading"
               className="text-sm font-medium tracking-wide text-secondary uppercase"
@@ -55,7 +55,7 @@ export default function ResumePage() {
             </p>
           </section>
 
-          <section aria-labelledby="experience-heading" className="mt-10">
+          <section aria-labelledby="experience-heading" className="mt-10 print:mt-5">
             <h2
               id="experience-heading"
               className="text-sm font-medium tracking-wide text-secondary uppercase"
@@ -78,7 +78,7 @@ export default function ResumePage() {
             </ul>
           </section>
 
-          <section aria-labelledby="education-heading" className="mt-10">
+          <section aria-labelledby="education-heading" className="mt-10 print:mt-5">
             <h2
               id="education-heading"
               className="text-sm font-medium tracking-wide text-secondary uppercase"
@@ -106,7 +106,7 @@ export default function ResumePage() {
             </ul>
           </section>
 
-          <section aria-labelledby="technologies-heading" className="mt-10">
+          <section aria-labelledby="technologies-heading" className="mt-10 print:mt-5">
             <h2
               id="technologies-heading"
               className="text-sm font-medium tracking-wide text-secondary uppercase"

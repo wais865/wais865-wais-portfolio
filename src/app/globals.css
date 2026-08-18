@@ -56,9 +56,4 @@ body {
     --color-border: #cccccc;
     --color-accent: #111111;
   }
-
-  header,
-  footer {
-    display: none;
-  }
 }

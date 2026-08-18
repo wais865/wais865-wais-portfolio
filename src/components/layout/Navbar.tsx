@@ -11,7 +11,7 @@ const resumeFileExists = fs.existsSync(
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background">
+    <header className="sticky top-0 z-50 border-b border-border bg-background print:hidden">
       <Container>
         <nav
           aria-label="Primary"
