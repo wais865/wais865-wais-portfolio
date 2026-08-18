@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Section from "@/components/layout/Section";
 import SectionLabel from "@/components/ui/SectionLabel";
-import SelectedProject from "@/components/home/SelectedProject";
+import SelectedProjectRow from "@/components/projects/SelectedProjectRow";
 import ExpandableProjectGrid from "@/components/projects/ExpandableProjectGrid";
 import { projects } from "@/data/projects";
 
@@ -37,9 +37,13 @@ export default function ProjectsPage() {
           Selected Projects
         </h2>
 
-        <div className="mt-6 flex flex-col gap-5">
-          {selectedProjects.map((project) => (
-            <SelectedProject key={project.slug} project={project} />
+        <div className="mt-6 divide-y divide-border border-y border-border">
+          {selectedProjects.map((project, index) => (
+            <SelectedProjectRow
+              key={project.slug}
+              project={project}
+              index={index}
+            />
           ))}
         </div>
       </Section>
