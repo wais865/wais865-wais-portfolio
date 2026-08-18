@@ -18,20 +18,20 @@ export default function Navbar() {
 
           <ul className="flex items-center gap-4 text-sm sm:gap-6">
             <li>
-              <a
-                href="#work"
+              <Link
+                href="/#work"
                 className="text-secondary transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm"
               >
                 Projects
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#about"
+              <Link
+                href="/#about"
                 className="text-secondary transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm"
               >
                 About
-              </a>
+              </Link>
             </li>
             <li>
               <Link
