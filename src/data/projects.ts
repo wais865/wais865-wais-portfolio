@@ -13,6 +13,57 @@ export const projects: Project[] = [
     href: "/projects/hrmis",
     privateRepository: true,
     caseStudyAvailable: true,
+    caseStudy: {
+      role: "Core Development Team · Full-Stack Development",
+      team: "Collaborative Project",
+      repositoryStatus: "Private",
+      overview: [
+        "HRMIS is part of a larger enterprise human-resource platform intended to support internal administrative workflows for a government organization.",
+        "The application was developed collaboratively as a full-stack effort, combining a React-based frontend with a Node.js and Express backend connected through API integration.",
+      ],
+      problem: [
+        "Organizations that rely on fragmented or manual processes for HR-related administrative tasks often face inconsistent record-keeping and slower internal workflows. HRMIS was built to give internal administrative processes a structured, centralized digital interface rather than relying on ad hoc or manual handling.",
+      ],
+      approach: [
+        "Modular frontend development using React and Vite",
+        "Integration with backend APIs to connect UI views to live data",
+        "Reuse of consistent UI patterns across different administrative modules",
+        "Clear separation between frontend presentation and backend logic",
+        "Iterative, collaborative development within an existing enterprise codebase",
+      ],
+      features: [
+        "Administrative workflow interfaces for internal processes",
+        "Structured data entry and management views",
+        "API-connected application views reflecting backend data",
+        "Reusable application modules shared across different parts of the system",
+      ],
+      techStack: [
+        { category: "Frontend", items: ["React", "Vite"] },
+        {
+          category: "Backend / Integration",
+          items: ["Node.js", "Express", "API Integration"],
+        },
+      ],
+      challenges: [
+        "Understanding and working within an existing, larger enterprise codebase before extending it",
+        "Coordinating changes with another developer inside a shared, collaborative codebase",
+        "Integrating frontend views cleanly with backend APIs without duplicating logic",
+        "Maintaining consistency across multiple administrative modules",
+      ],
+      learnings: [
+        "Reading and extending an existing codebase requires understanding its conventions before introducing changes",
+        "Clear API contracts make frontend/backend collaboration significantly smoother",
+        "Consistent UI patterns reduce complexity when a system has multiple similar modules",
+      ],
+      outcome: [
+        "The work contributed to a broader HRMIS application within a government organization and provided practical, hands-on experience building software for a real organizational system in a collaborative development environment.",
+      ],
+      screenshots: [
+        { size: "large", caption: "Application overview" },
+        { size: "small", caption: "Administrative workflow view" },
+        { size: "small", caption: "Data management view" },
+      ],
+    },
   },
   {
     slug: "dmis",
