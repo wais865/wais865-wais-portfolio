@@ -4,6 +4,7 @@ export const projects: Project[] = [
   {
     slug: "hrmis",
     title: "Human Resource Management Information System",
+    shortTitle: "HRMIS",
     category: "Enterprise Application",
     meta: "Enterprise Application · Government Project",
     description:

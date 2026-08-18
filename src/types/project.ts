@@ -9,19 +9,19 @@ export interface TechStackGroup {
 }
 
 export interface ProjectCaseStudy {
-  role: string;
-  roleDetails: string[];
-  team: string;
-  repositoryStatus: string;
-  overview: string[];
-  problem: string[];
-  approach: string[];
-  features: string[];
-  techStack: TechStackGroup[];
-  challenges: string[];
-  learnings: string[];
-  outcome: string[];
-  screenshots: ScreenshotPlaceholder[];
+  role?: string;
+  roleDetails?: string[];
+  team?: string;
+  repositoryStatus?: string;
+  overview?: string[];
+  problem?: string[];
+  approach?: string[];
+  features?: string[];
+  techStack?: TechStackGroup[];
+  screenshots?: ScreenshotPlaceholder[];
+  challenges?: string[];
+  learnings?: string[];
+  outcome?: string[];
 }
 
 export interface Project {
