@@ -1,13 +1,5 @@
-import fs from "node:fs";
-import path from "node:path";
 import Link from "next/link";
 import Container from "./Container";
-import TextLink from "@/components/ui/TextLink";
-import { siteLinks } from "@/data/links";
-
-const resumeFileExists = fs.existsSync(
-  path.join(process.cwd(), "public", siteLinks.resumeHref.replace(/^\//, "")),
-);
 
 export default function Navbar() {
   return (
@@ -42,12 +34,12 @@ export default function Navbar() {
               </a>
             </li>
             <li>
-              <TextLink
-                href={resumeFileExists ? siteLinks.resumeHref : null}
-                external
+              <Link
+                href="/resume"
+                className="text-secondary transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm"
               >
-                Resume ↓
-              </TextLink>
+                Resume
+              </Link>
             </li>
           </ul>
         </nav>
