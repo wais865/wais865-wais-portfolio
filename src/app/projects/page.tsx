@@ -4,12 +4,12 @@ import SectionLabel from "@/components/ui/SectionLabel";
 import SelectedProjectRow from "@/components/projects/SelectedProjectRow";
 import ExpandableProjectGrid from "@/components/projects/ExpandableProjectGrid";
 import { getProjects } from "@/lib/projects/getProjects";
+import { buildMetadata } from "@/config/site";
 
-export const metadata: Metadata = {
-  title: "Projects — Wais Alizada",
-  description:
-    "Selected work and other software projects built while learning, working and solving real-world problems.",
-};
+export const metadata: Metadata = buildMetadata(
+  "Projects — Wais Alizada",
+  "Selected work and other software projects built while learning, working and solving real-world problems.",
+);
 
 const DEFAULT_VISIBLE_COUNT = 6;
 

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import CaseStudyTemplate from "@/components/case-study/CaseStudyTemplate";
 import { getProjectBySlug } from "@/lib/projects/getProjectBySlug";
 import { getProjects } from "@/lib/projects/getProjects";
+import { buildMetadata } from "@/config/site";
 
 interface ProjectPageProps {
   params: Promise<{ slug: string }>;
@@ -26,10 +27,10 @@ export async function generateMetadata({
     return {};
   }
 
-  return {
-    title: `${project.shortTitle ?? project.title} Case Study — Wais Alizada`,
-    description: project.description,
-  };
+  return buildMetadata(
+    `${project.shortTitle ?? project.title} Case Study — Wais Alizada`,
+    project.description,
+  );
 }
 
 export default async function ProjectCaseStudyPage({

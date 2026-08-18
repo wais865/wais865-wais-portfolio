@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { site, buildMetadata } from "@/config/site";
 import "./globals.css";
 
 const inter = Inter({
@@ -11,9 +12,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Wais Alizada — Software Developer",
-  description:
-    "Software Developer focused on backend and full-stack engineering. Building practical software for real-world problems.",
+  ...buildMetadata(site.title, site.description),
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

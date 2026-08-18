@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import type { Metadata } from "next";
 import Container from "@/components/layout/Container";
 import TextLink from "@/components/ui/TextLink";
 import Divider from "@/components/ui/Divider";
@@ -7,6 +8,12 @@ import { experience } from "@/data/experience";
 import { education } from "@/data/education";
 import { technologies } from "@/data/technologies";
 import { siteLinks } from "@/data/links";
+import { buildMetadata } from "@/config/site";
+
+export const metadata: Metadata = buildMetadata(
+  "Resume — Wais Alizada",
+  "Resume for Wais Alizada, Software Developer — experience, education and technologies.",
+);
 
 const resumeFileExists = fs.existsSync(
   path.join(process.cwd(), "public", siteLinks.resumeHref.replace(/^\//, "")),

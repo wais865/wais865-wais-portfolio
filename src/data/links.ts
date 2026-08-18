@@ -1,7 +1,9 @@
+import { site } from "@/config/site";
+
 export const siteLinks = {
-  github: "https://github.com/wais865",
+  github: site.github,
   // TODO: add LinkedIn profile URL once confirmed. Do not invent one.
   linkedin: null as string | null,
-  email: "waisalizada35@gmail.com",
+  email: site.email,
   resumeHref: "/wais-alizada-resume.pdf",
 };
