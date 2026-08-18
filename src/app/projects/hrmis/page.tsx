@@ -77,6 +77,19 @@ export default function HrmisCaseStudyPage() {
             ))}
           </ul>
         </ProjectSection>
+
+        <ProjectSection heading="Key Features">
+          <ul className="flex flex-col gap-2">
+            {caseStudy.features.map((item) => (
+              <li
+                key={item}
+                className="text-base leading-relaxed text-secondary"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+        </ProjectSection>
       </Container>
     </main>
   );
