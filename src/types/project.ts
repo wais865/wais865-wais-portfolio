@@ -1,6 +1,8 @@
 export interface ScreenshotPlaceholder {
   caption?: string;
   size?: "large" | "small";
+  src?: string;
+  alt?: string;
 }
 
 export interface TechStackGroup {

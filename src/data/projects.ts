@@ -201,9 +201,24 @@ export const projects: Project[] = [
         { category: "Integration", items: ["EmailJS"] },
       ],
       screenshots: [
-        { size: "large", caption: "Homepage (English)" },
-        { size: "small", caption: "Homepage (German)" },
-        { size: "small", caption: "Services section" },
+        {
+          size: "large",
+          src: "/projects/talent-aurora/hero-en.jpg",
+          alt: "Talent Aurora homepage, English",
+          caption: "Homepage (English)",
+        },
+        {
+          size: "small",
+          src: "/projects/talent-aurora/hero-de.jpg",
+          alt: "Talent Aurora homepage, German",
+          caption: "Homepage (German)",
+        },
+        {
+          size: "small",
+          src: "/projects/talent-aurora/services.jpg",
+          alt: "Talent Aurora services section",
+          caption: "Services section",
+        },
       ],
       challenges: [
         "Translating client requirements and brand direction into concrete implementation decisions without a development team to validate the approach with",
