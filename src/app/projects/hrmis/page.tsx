@@ -50,6 +50,19 @@ export default function HrmisCaseStudyPage() {
             </p>
           ))}
         </ProjectSection>
+
+        <ProjectSection heading="Approach">
+          <ul className="flex flex-col gap-2">
+            {caseStudy.approach.map((item) => (
+              <li
+                key={item}
+                className="text-base leading-relaxed text-secondary"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+        </ProjectSection>
       </Container>
     </main>
   );
