@@ -18,9 +18,9 @@ export default function Hero() {
           Wais Alizada
         </h1>
 
-        <h2 className="mt-4 max-w-2xl text-xl text-secondary md:text-2xl">
+        <p className="mt-4 max-w-2xl text-xl text-secondary md:text-2xl">
           Software Developer focused on backend and full-stack engineering.
-        </h2>
+        </p>
 
         <p className="mt-6 max-w-xl text-base leading-relaxed text-muted">
           I build practical software for real-world problems, with a focus on
