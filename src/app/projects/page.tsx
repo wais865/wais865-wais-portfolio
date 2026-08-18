@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Section from "@/components/layout/Section";
 import SectionLabel from "@/components/ui/SectionLabel";
 import SelectedProject from "@/components/home/SelectedProject";
-import ProjectGrid from "@/components/projects/ProjectGrid";
+import ExpandableProjectGrid from "@/components/projects/ExpandableProjectGrid";
 import { projects } from "@/data/projects";
 
 export const metadata: Metadata = {
@@ -16,6 +16,7 @@ const DEFAULT_VISIBLE_COUNT = 6;
 export default function ProjectsPage() {
   const selectedProjects = projects.filter((project) => project.featured);
   const visibleProjects = projects.slice(0, DEFAULT_VISIBLE_COUNT);
+  const additionalProjects = projects.slice(DEFAULT_VISIBLE_COUNT);
 
   return (
     <main>
@@ -50,7 +51,10 @@ export default function ProjectsPage() {
         </h2>
 
         <div className="mt-6">
-          <ProjectGrid projects={visibleProjects} />
+          <ExpandableProjectGrid
+            visibleProjects={visibleProjects}
+            additionalProjects={additionalProjects}
+          />
         </div>
       </Section>
     </main>
