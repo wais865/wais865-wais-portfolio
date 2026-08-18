@@ -38,9 +38,11 @@ export default function Hero() {
           <TextLink href={siteLinks.github} external>
             GitHub ↗
           </TextLink>
-          <TextLink href={siteLinks.linkedin} external>
-            LinkedIn ↗
-          </TextLink>
+          {siteLinks.linkedin ? (
+            <TextLink href={siteLinks.linkedin} external>
+              LinkedIn ↗
+            </TextLink>
+          ) : null}
         </div>
       </Container>
     </section>
