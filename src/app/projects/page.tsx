@@ -46,9 +46,18 @@ export default function ProjectsPage() {
             />
           ))}
         </div>
+
+        <div className="mt-6">
+          <a
+            href="#all-projects"
+            className="text-sm font-medium text-primary transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm"
+          >
+            Browse all projects ↓
+          </a>
+        </div>
       </Section>
 
-      <Section bordered padding="compact">
+      <Section id="all-projects" bordered padding="compact">
         <SectionLabel>All Projects</SectionLabel>
         <h2 className="text-2xl font-semibold text-primary md:text-3xl">
           All Projects
