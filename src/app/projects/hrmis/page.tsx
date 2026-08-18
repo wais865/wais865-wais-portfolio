@@ -100,6 +100,36 @@ export default function HrmisCaseStudyPage() {
         <ProjectSection heading="Screenshots">
           <ScreenshotGallery items={caseStudy.screenshots} />
         </ProjectSection>
+
+        <ProjectSection heading="Challenges & Learnings">
+          <h3 className="text-sm font-medium tracking-wide text-secondary uppercase">
+            Challenges
+          </h3>
+          <ul className="mt-3 flex flex-col gap-2">
+            {caseStudy.challenges.map((item) => (
+              <li
+                key={item}
+                className="text-base leading-relaxed text-secondary"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+
+          <h3 className="mt-6 text-sm font-medium tracking-wide text-secondary uppercase">
+            Learnings
+          </h3>
+          <ul className="mt-3 flex flex-col gap-2">
+            {caseStudy.learnings.map((item) => (
+              <li
+                key={item}
+                className="text-base leading-relaxed text-secondary"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+        </ProjectSection>
       </Container>
     </main>
   );
