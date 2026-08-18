@@ -13,6 +13,7 @@ import { buildMetadata } from "@/config/site";
 export const metadata: Metadata = buildMetadata(
   "Resume — Wais Alizada",
   "Resume for Wais Alizada, Software Developer — experience, education and technologies.",
+  "/resume",
 );
 
 const resumeFileExists = fs.existsSync(

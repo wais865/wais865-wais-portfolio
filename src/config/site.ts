@@ -7,21 +7,29 @@ export const site = {
     "Software Developer focused on backend and full-stack engineering. Building practical software for real-world problems.",
   email: "waisalizada35@gmail.com",
   github: "https://github.com/wais865",
-  // Set once a production deployment URL is confirmed. Do not invent one.
-  siteUrl: null as string | null,
+  siteUrl: "https://temporary-instant-cedar-joq1dij.vercel.app" as string | null,
 };
 
-export function buildMetadata(title: string, description?: string): Metadata {
+export function buildMetadata(
+  title: string,
+  description?: string,
+  path: string = "/",
+): Metadata {
   const resolvedDescription = description ?? site.description;
+  const canonicalUrl = site.siteUrl
+    ? new URL(path, site.siteUrl).toString()
+    : undefined;
 
   return {
     title,
     description: resolvedDescription,
+    ...(canonicalUrl ? { alternates: { canonical: canonicalUrl } } : {}),
     openGraph: {
       title,
       description: resolvedDescription,
       siteName: site.name,
       type: "website",
+      ...(canonicalUrl ? { url: canonicalUrl } : {}),
     },
     twitter: {
       card: "summary",

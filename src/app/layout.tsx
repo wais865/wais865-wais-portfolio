@@ -12,7 +12,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  ...buildMetadata(site.title, site.description),
+  ...(site.siteUrl ? { metadataBase: new URL(site.siteUrl) } : {}),
+  ...buildMetadata(site.title, site.description, "/"),
   robots: {
     index: true,
     follow: true,

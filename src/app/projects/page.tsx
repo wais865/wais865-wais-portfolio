@@ -9,6 +9,7 @@ import { buildMetadata } from "@/config/site";
 export const metadata: Metadata = buildMetadata(
   "Projects — Wais Alizada",
   "Selected work and other software projects built while learning, working and solving real-world problems.",
+  "/projects",
 );
 
 const DEFAULT_VISIBLE_COUNT = 6;

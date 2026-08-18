@@ -30,6 +30,7 @@ export async function generateMetadata({
   return buildMetadata(
     `${project.shortTitle ?? project.title} Case Study — Wais Alizada`,
     project.description,
+    `/projects/${project.slug}`,
   );
 }
 
