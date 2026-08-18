@@ -44,3 +44,21 @@ body {
     scroll-behavior: auto;
   }
 }
+
+@media print {
+  :root {
+    --color-background: #ffffff;
+    --color-surface: #ffffff;
+    --color-surface-2: #ffffff;
+    --color-primary: #111111;
+    --color-secondary: #333333;
+    --color-muted: #555555;
+    --color-border: #cccccc;
+    --color-accent: #111111;
+  }
+
+  header,
+  footer {
+    display: none;
+  }
+}
