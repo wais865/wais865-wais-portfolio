@@ -1,3 +1,28 @@
+export interface ScreenshotPlaceholder {
+  caption?: string;
+  size?: "large" | "small";
+}
+
+export interface TechStackGroup {
+  category: string;
+  items: string[];
+}
+
+export interface ProjectCaseStudy {
+  role: string;
+  team: string;
+  repositoryStatus: string;
+  overview: string[];
+  problem: string[];
+  approach: string[];
+  features: string[];
+  techStack: TechStackGroup[];
+  challenges: string[];
+  learnings: string[];
+  outcome: string[];
+  screenshots: ScreenshotPlaceholder[];
+}
+
 export interface Project {
   slug: string;
   title: string;
@@ -15,4 +40,5 @@ export interface Project {
   liveUrl?: string;
   privateRepository?: boolean;
   caseStudyAvailable?: boolean;
+  caseStudy?: ProjectCaseStudy;
 }
