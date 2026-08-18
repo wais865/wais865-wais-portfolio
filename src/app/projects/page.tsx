@@ -3,7 +3,7 @@ import Section from "@/components/layout/Section";
 import SectionLabel from "@/components/ui/SectionLabel";
 import SelectedProjectRow from "@/components/projects/SelectedProjectRow";
 import ExpandableProjectGrid from "@/components/projects/ExpandableProjectGrid";
-import { projects } from "@/data/projects";
+import { getProjects } from "@/lib/projects/getProjects";
 
 export const metadata: Metadata = {
   title: "Projects — Wais Alizada",
@@ -13,7 +13,8 @@ export const metadata: Metadata = {
 
 const DEFAULT_VISIBLE_COUNT = 6;
 
-export default function ProjectsPage() {
+export default async function ProjectsPage() {
+  const projects = await getProjects();
   const selectedProjects = projects.filter((project) => project.featured);
   const visibleProjects = projects.slice(0, DEFAULT_VISIBLE_COUNT);
   const additionalProjects = projects.slice(DEFAULT_VISIBLE_COUNT);
