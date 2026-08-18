@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 interface ProjectLinksProps {
-  repositoryStatus: string;
+  repositoryStatus?: string;
   githubUrl?: string;
   liveUrl?: string;
 }
@@ -44,7 +44,7 @@ export default function ProjectLinks({
               Live ↗
             </a>
           ) : null}
-          {!hasExternalLinks ? (
+          {!hasExternalLinks && repositoryStatus ? (
             <span className="text-muted">Repository: {repositoryStatus}</span>
           ) : null}
         </div>

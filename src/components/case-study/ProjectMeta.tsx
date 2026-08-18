@@ -1,7 +1,7 @@
 interface ProjectMetaProps {
-  role: string;
-  team: string;
-  repositoryStatus: string;
+  role?: string;
+  team?: string;
+  repositoryStatus?: string;
 }
 
 export default function ProjectMeta({
@@ -13,7 +13,13 @@ export default function ProjectMeta({
     { label: "Role", value: role },
     { label: "Team", value: team },
     { label: "Repository", value: repositoryStatus },
-  ];
+  ].filter(
+    (item): item is { label: string; value: string } => item.value != null,
+  );
+
+  if (items.length === 0) {
+    return null;
+  }
 
   return (
     <div className="grid grid-cols-1 gap-6 border-b border-border py-8 sm:grid-cols-3 md:py-10">
