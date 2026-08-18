@@ -5,6 +5,7 @@ import ProjectMeta from "@/components/case-study/ProjectMeta";
 import ProjectSection from "@/components/case-study/ProjectSection";
 import TechStack from "@/components/case-study/TechStack";
 import ScreenshotGallery from "@/components/case-study/ScreenshotGallery";
+import ProjectLinks from "@/components/case-study/ProjectLinks";
 import { projects } from "@/data/projects";
 
 export default function HrmisCaseStudyPage() {
@@ -141,6 +142,12 @@ export default function HrmisCaseStudyPage() {
             </p>
           ))}
         </ProjectSection>
+
+        <ProjectLinks
+          repositoryStatus={caseStudy.repositoryStatus}
+          githubUrl={project.githubUrl}
+          liveUrl={project.liveUrl}
+        />
       </Container>
     </main>
   );
