@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Container from "@/components/layout/Container";
 import ProjectHeader from "@/components/case-study/ProjectHeader";
@@ -7,6 +8,12 @@ import TechStack from "@/components/case-study/TechStack";
 import ScreenshotGallery from "@/components/case-study/ScreenshotGallery";
 import ProjectLinks from "@/components/case-study/ProjectLinks";
 import { projects } from "@/data/projects";
+
+export const metadata: Metadata = {
+  title: "HRMIS Case Study — Wais Alizada",
+  description:
+    "Case study of the Human Resource Management Information System (HRMIS), a collaborative full-stack enterprise application co-developed with React, Vite, Node.js, and Express.",
+};
 
 export default function HrmisCaseStudyPage() {
   const project = projects.find((item) => item.slug === "hrmis");
