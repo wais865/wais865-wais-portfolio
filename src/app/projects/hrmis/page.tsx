@@ -130,6 +130,17 @@ export default function HrmisCaseStudyPage() {
             ))}
           </ul>
         </ProjectSection>
+
+        <ProjectSection heading="Outcome">
+          {caseStudy.outcome.map((paragraph) => (
+            <p
+              key={paragraph}
+              className="text-base leading-relaxed text-secondary [&:not(:first-child)]:mt-4"
+            >
+              {paragraph}
+            </p>
+          ))}
+        </ProjectSection>
       </Container>
     </main>
   );
