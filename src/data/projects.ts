@@ -28,11 +28,11 @@ export const projects: Project[] = [
         "The application was developed collaboratively as a full-stack effort, combining a React-based frontend with a Node.js and Express backend connected through API integration.",
       ],
       problem: [
-        "Organizations that rely on fragmented or manual processes for HR-related administrative tasks often face inconsistent record-keeping and slower internal workflows. HRMIS was built to give internal administrative processes a structured, centralized digital interface rather than relying on ad hoc or manual handling.",
+        "The project addressed the need for structured digital interfaces supporting HR-related administrative workflows within a larger organizational system. Contributing to HRMIS meant building frontend and integration work that fit into a centralized, structured approach to internal administrative processes.",
       ],
       approach: [
         "Modular frontend development using React and Vite",
-        "Integration with backend APIs to connect UI views to live data",
+        "Connecting UI views to backend data through API integration",
         "Reuse of consistent UI patterns across different administrative modules",
         "Clear separation between frontend presentation and backend logic",
         "Iterative, collaborative development within an existing enterprise codebase",
@@ -57,9 +57,9 @@ export const projects: Project[] = [
         "Maintaining consistency across multiple administrative modules",
       ],
       learnings: [
-        "Reading and extending an existing codebase requires understanding its conventions before introducing changes",
-        "Clear API contracts make frontend/backend collaboration significantly smoother",
-        "Consistent UI patterns reduce complexity when a system has multiple similar modules",
+        "Extending an existing codebase reinforced the importance of understanding its conventions before introducing changes",
+        "Working across frontend and backend reinforced the importance of clear API contracts and consistent integration patterns",
+        "Applying consistent UI patterns across similar modules highlighted how much it reduces complexity in a growing system",
       ],
       outcome: [
         "The work contributed to a broader HRMIS application within a government organization and provided practical, hands-on experience building software for a real organizational system in a collaborative development environment.",
