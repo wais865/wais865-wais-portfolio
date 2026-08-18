@@ -45,7 +45,7 @@ function CardLinkAffordance() {
 }
 
 const cardClassName =
-  "group flex h-full flex-col rounded-lg border border-border bg-surface p-5 transition-colors";
+  "group flex h-full min-h-[140px] flex-col rounded-lg border border-border bg-surface p-5 transition-colors";
 const interactiveClassName = `${cardClassName} hover:border-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background`;
 
 function CardWrapper({
