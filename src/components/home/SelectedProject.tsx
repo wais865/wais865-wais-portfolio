@@ -1,34 +1,49 @@
 import Link from "next/link";
 import type { Project } from "@/types/project";
 
-export default function SelectedProject({ project }: { project: Project }) {
+interface SelectedProjectProps {
+  project: Project;
+  index: number;
+}
+
+export default function SelectedProject({
+  project,
+  index,
+}: SelectedProjectProps) {
   return (
-    <article className="rounded-lg border border-border bg-surface p-6 md:p-8">
-      <p className="text-sm text-muted">{project.meta}</p>
-
-      <h3 className="mt-2 text-xl font-semibold text-primary md:text-2xl">
-        {project.title}
-      </h3>
-
-      <p className="mt-3 max-w-2xl text-base leading-relaxed text-secondary">
-        {project.description}
-      </p>
-
-      <p className="mt-4 text-sm text-muted">{project.stack.join(" · ")}</p>
-
-      {project.highlight ? (
-        <p className="mt-3 inline-block rounded-full border border-border bg-surface-2 px-3 py-1 text-xs text-accent">
-          {project.highlight}
+    <article className="group grid grid-cols-1 gap-6 py-10 transition-colors hover:bg-surface/40 md:grid-cols-[58%_1fr] md:items-start md:gap-10 md:py-12">
+      <div>
+        <p className="text-xs font-medium tracking-wide text-muted uppercase">
+          {project.meta}
         </p>
-      ) : null}
-
-      <div className="mt-6">
+        <h3 className="mt-2 text-xl font-semibold text-primary md:text-2xl">
+          {project.title}
+        </h3>
+        <p className="mt-3 text-base leading-relaxed text-secondary">
+          {project.description}
+        </p>
+        <p className="mt-4 text-sm text-muted">{project.stack.join(" · ")}</p>
+        {project.highlight ? (
+          <p className="mt-2 text-sm text-accent">{project.highlight}</p>
+        ) : null}
         <Link
           href={project.href}
-          className="text-sm font-medium text-primary transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm"
+          className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-primary transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm"
         >
-          View project →
+          View project
+          <span
+            className="inline-block transition-transform duration-150 group-hover:translate-x-1"
+            aria-hidden="true"
+          >
+            →
+          </span>
         </Link>
+      </div>
+
+      <div className="flex h-20 items-center justify-center border border-border bg-surface-2 transition-colors group-hover:border-muted md:h-auto md:aspect-[4/3]">
+        <span className="font-mono text-sm tracking-[0.3em] text-muted">
+          {String(index + 1).padStart(2, "0")}
+        </span>
       </div>
     </article>
   );

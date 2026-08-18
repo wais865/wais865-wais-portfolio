@@ -12,9 +12,13 @@ export default function SelectedWork() {
         Projects
       </h2>
 
-      <div className="mt-10 flex flex-col gap-6">
-        {projects.map((project) => (
-          <SelectedProject key={project.slug} project={project} />
+      <div className="mt-10 divide-y divide-border border-y border-border">
+        {projects.map((project, index) => (
+          <SelectedProject
+            key={project.slug}
+            project={project}
+            index={index}
+          />
         ))}
       </div>
 
