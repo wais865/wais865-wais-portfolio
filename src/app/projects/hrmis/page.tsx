@@ -3,6 +3,7 @@ import Container from "@/components/layout/Container";
 import ProjectHeader from "@/components/case-study/ProjectHeader";
 import ProjectMeta from "@/components/case-study/ProjectMeta";
 import ProjectSection from "@/components/case-study/ProjectSection";
+import TechStack from "@/components/case-study/TechStack";
 import { projects } from "@/data/projects";
 
 export default function HrmisCaseStudyPage() {
@@ -89,6 +90,10 @@ export default function HrmisCaseStudyPage() {
               </li>
             ))}
           </ul>
+        </ProjectSection>
+
+        <ProjectSection heading="Tech Stack">
+          <TechStack groups={caseStudy.techStack} />
         </ProjectSection>
       </Container>
     </main>
