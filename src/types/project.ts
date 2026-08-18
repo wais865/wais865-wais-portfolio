@@ -1,9 +1,18 @@
 export interface Project {
   slug: string;
   title: string;
+  shortTitle?: string;
+  category: string;
   meta: string;
-  description: string;
-  stack: string[];
+  description?: string;
+  year?: number;
+  stack?: string[];
   highlight?: string;
-  href: string;
+  featured: boolean;
+  status?: string;
+  href?: string;
+  githubUrl?: string;
+  liveUrl?: string;
+  privateRepository?: boolean;
+  caseStudyAvailable?: boolean;
 }

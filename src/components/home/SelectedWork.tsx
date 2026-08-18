@@ -5,6 +5,8 @@ import SelectedProject from "./SelectedProject";
 import { projects } from "@/data/projects";
 
 export default function SelectedWork() {
+  const featuredProjects = projects.filter((project) => project.featured);
+
   return (
     <Section id="work" bordered padding="compact">
       <SectionLabel>Selected Work</SectionLabel>
@@ -13,7 +15,7 @@ export default function SelectedWork() {
       </h2>
 
       <div className="mt-6 flex flex-col gap-5">
-        {projects.map((project) => (
+        {featuredProjects.map((project) => (
           <SelectedProject key={project.slug} project={project} />
         ))}
       </div>

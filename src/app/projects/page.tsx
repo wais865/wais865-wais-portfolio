@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default function ProjectsPage() {
-  const selectedProjects = projects.slice(0, 3);
+  const selectedProjects = projects.filter((project) => project.featured);
 
   return (
     <main>

@@ -14,7 +14,9 @@ export default function SelectedProject({ project }: { project: Project }) {
         {project.description}
       </p>
 
-      <p className="mt-4 text-sm text-muted">{project.stack.join(" · ")}</p>
+      {project.stack && project.stack.length > 0 ? (
+        <p className="mt-4 text-sm text-muted">{project.stack.join(" · ")}</p>
+      ) : null}
 
       {project.highlight ? (
         <p className="mt-3 inline-block rounded-full border border-border bg-surface-2 px-3 py-1 text-xs text-accent">
@@ -22,14 +24,16 @@ export default function SelectedProject({ project }: { project: Project }) {
         </p>
       ) : null}
 
-      <div className="mt-6">
-        <Link
-          href={project.href}
-          className="text-sm font-medium text-primary transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm"
-        >
-          View project →
-        </Link>
-      </div>
+      {project.href ? (
+        <div className="mt-6">
+          <Link
+            href={project.href}
+            className="text-sm font-medium text-primary transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm"
+          >
+            View project →
+          </Link>
+        </div>
+      ) : null}
     </article>
   );
 }
