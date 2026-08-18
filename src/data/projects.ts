@@ -75,6 +75,7 @@ export const projects: Project[] = [
   {
     slug: "dmis",
     title: "Dormitory Management Information System",
+    shortTitle: "DMIS",
     category: "University Project",
     meta: "Final-Year Project · Real Deployment",
     description:
@@ -87,6 +88,65 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/wais865/Dormitory-management-information-system",
     privateRepository: false,
     caseStudyAvailable: true,
+    caseStudy: {
+      role: "Lead Developer · Full-Stack Development",
+      roleDetails: [
+        "Serving as lead developer and primary implementer on a three-person university team",
+        "Designing the MongoDB and Mongoose data models for dormitory, inventory, and administrative records",
+        "Building the Express backend, including modular routers for feed, office, and goods management",
+        "Implementing authentication and session handling with Passport and MongoDB-backed sessions",
+      ],
+      team: "Three-Person University Team",
+      repositoryStatus: "Public",
+      overview: [
+        "DMIS is a final-year university project built for the Kabul Polytechnic University dormitory, developed as a three-person team and deployed for real dormitory operations rather than remaining a classroom prototype.",
+        "The application is a full-stack Node.js and Express system with MongoDB and Mongoose for data storage and EJS for server-rendered views, structured around modular routes for feed, office, and goods management.",
+      ],
+      problem: [
+        "The project addressed the need for a centralized system to manage day-to-day dormitory administrative work — student and dormitory records, inventory, food/feed operations, and office administration — for the Kabul Polytechnic University dormitory.",
+      ],
+      approach: [
+        "Modular Express routers separating feed management, office management, and goods/inventory management into independent route modules",
+        "MongoDB and Mongoose for structured, schema-based data modeling across dormitory, inventory, and administrative records",
+        "Session-based authentication using Passport and MongoDB-backed session storage",
+        "Server-rendered views with EJS and a shared layout system for consistent UI across modules",
+        "Centralized error handling for 404 and 500 responses",
+      ],
+      features: [
+        "Student and dormitory administration",
+        "Office management",
+        "Goods and inventory management",
+        "Food/feed management",
+        "Authentication and role-based access",
+        "User management and password recovery",
+        "Reports and operational workflows",
+      ],
+      techStack: [
+        { category: "Backend", items: ["Node.js", "Express.js"] },
+        { category: "Database", items: ["MongoDB", "Mongoose"] },
+        { category: "Authentication", items: ["Passport", "JWT", "Express Session"] },
+        { category: "Views & Utilities", items: ["EJS", "Nodemailer", "Bootstrap"] },
+      ],
+      screenshots: [
+        { size: "large", caption: "Application overview" },
+        { size: "small", caption: "Office management view" },
+        { size: "small", caption: "Goods and inventory view" },
+      ],
+      challenges: [
+        "Structuring a growing Express application into modular, independently maintainable route groups as the project's scope expanded",
+        "Modeling dormitory, inventory, and administrative data in MongoDB in a way that stayed consistent across multiple related modules",
+        "Coordinating a three-person team working across a shared codebase for a real deployment, not just a classroom exercise",
+        "Restoring and documenting the project afterward without exposing credentials or student data, since the original collaborative commit history wasn't preserved on this account",
+      ],
+      learnings: [
+        "Leading a three-person team on a real deployment reinforced the importance of clear module boundaries so each area of the system could be worked on independently",
+        "Designing MongoDB schemas for interconnected administrative data highlighted the value of planning data relationships before implementation",
+        "Working with session-based authentication and role-based access deepened my understanding of how authentication state flows through a server-rendered application",
+      ],
+      outcome: [
+        "DMIS was actually deployed and used for the Kabul Polytechnic University dormitory rather than remaining a classroom prototype, providing direct, lead-developer experience across the full stack — from data modeling through to the operational features administrators used day to day.",
+      ],
+    },
   },
   {
     slug: "talent-aurora",
