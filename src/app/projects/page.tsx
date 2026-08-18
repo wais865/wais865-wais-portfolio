@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Section from "@/components/layout/Section";
 import SectionLabel from "@/components/ui/SectionLabel";
+import SelectedProject from "@/components/home/SelectedProject";
+import { projects } from "@/data/projects";
 
 export const metadata: Metadata = {
   title: "Projects — Wais Alizada",
@@ -9,6 +11,8 @@ export const metadata: Metadata = {
 };
 
 export default function ProjectsPage() {
+  const selectedProjects = projects.slice(0, 3);
+
   return (
     <main>
       <Section padding="compact">
@@ -20,6 +24,19 @@ export default function ProjectsPage() {
           Selected work and other software projects built while learning,
           working and solving real-world problems.
         </p>
+      </Section>
+
+      <Section bordered padding="compact">
+        <SectionLabel>Selected Projects</SectionLabel>
+        <h2 className="text-2xl font-semibold text-primary md:text-3xl">
+          Selected Projects
+        </h2>
+
+        <div className="mt-6 flex flex-col gap-5">
+          {selectedProjects.map((project) => (
+            <SelectedProject key={project.slug} project={project} />
+          ))}
+        </div>
       </Section>
     </main>
   );
