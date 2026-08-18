@@ -10,13 +10,13 @@ export default function Technologies() {
         Technologies
       </h2>
 
-      <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-8 grid grid-cols-1 gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
         {technologies.map((group) => (
           <div key={group.category}>
-            <h3 className="text-sm font-medium tracking-wide text-muted uppercase">
+            <h3 className="text-sm font-medium tracking-wide text-secondary uppercase">
               {group.category}
             </h3>
-            <ul className="mt-4 flex flex-col gap-2">
+            <ul className="mt-3 flex flex-col gap-2">
               {group.items.map((item) => (
                 <li key={item} className="text-sm text-secondary">
                   {item}
