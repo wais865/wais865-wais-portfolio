@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Container from "@/components/layout/Container";
 import ProjectHeader from "@/components/case-study/ProjectHeader";
 import ProjectMeta from "@/components/case-study/ProjectMeta";
+import ProjectSection from "@/components/case-study/ProjectSection";
 import { projects } from "@/data/projects";
 
 export default function HrmisCaseStudyPage() {
@@ -27,6 +28,17 @@ export default function HrmisCaseStudyPage() {
           team={caseStudy.team}
           repositoryStatus={caseStudy.repositoryStatus}
         />
+
+        <ProjectSection heading="Overview">
+          {caseStudy.overview.map((paragraph) => (
+            <p
+              key={paragraph}
+              className="text-base leading-relaxed text-secondary [&:not(:first-child)]:mt-4"
+            >
+              {paragraph}
+            </p>
+          ))}
+        </ProjectSection>
       </Container>
     </main>
   );
